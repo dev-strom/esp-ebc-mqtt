@@ -1,0 +1,23 @@
+Import("env")
+
+# please keep $SOURCE variable, it will be replaced with a path to firmware
+
+# Generic
+#env.Replace(
+#    UPLOADER="python ./ota/ota_updater.py",
+#    UPLOADCMD="$UPLOADER $UPLOADERFLAGS $SOURCE"
+#)
+
+# # in-line command with arguments
+env.Replace(
+    UPLOADCMD="python ./ota/ota_updater.py --broker-host <IP-ADDRESS> --broker-username <USER-NAME> --broker-password <PASSWORD> --base-topic homie/ --device-id ebc-control $SOURCE"
+)
+
+# # Python callback
+# def on_upload(source, target, env):
+    # print(source, target)
+    # firmware_path = str(source[0])
+    # # do something
+    # env.Execute("executable arg1 arg2")
+
+# env.Replace(UPLOADCMD=on_upload)

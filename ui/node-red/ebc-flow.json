@@ -1,0 +1,1719 @@
+[
+    {
+        "id": "b8d21aeb6f8d5f34",
+        "type": "tab",
+        "label": "EBC-1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ac596b908838c9f8",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC connection",
+        "topic": "homie/ebc-control/controller/connection",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 180,
+        "wires": [
+            [
+                "f8a40972a4c09ad9",
+                "9de15d44c00cba4b"
+            ]
+        ]
+    },
+    {
+        "id": "9b37a275c0b717c7",
+        "type": "mqtt out",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC connection",
+        "topic": "homie/ebc-control/controller/connection/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "50dbe0137846f6f2",
+        "x": 620,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "f8a40972a4c09ad9",
+        "type": "ui_switch",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "Connection",
+        "tooltip": "",
+        "group": "981f99fbe508e15a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 350,
+        "y": 180,
+        "wires": [
+            [
+                "9b37a275c0b717c7"
+            ]
+        ]
+    },
+    {
+        "id": "d7325b2bfe91dd51",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC run",
+        "topic": "homie/ebc-control/cpu/run",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 240,
+        "wires": [
+            [
+                "ae1c6c3af43d8a46"
+            ]
+        ]
+    },
+    {
+        "id": "58a313ed13962e25",
+        "type": "mqtt out",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC run",
+        "topic": "homie/ebc-control/cpu/run/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "50dbe0137846f6f2",
+        "x": 600,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "ae1c6c3af43d8a46",
+        "type": "ui_switch",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "Program Run",
+        "tooltip": "",
+        "group": "abb5ab1346f5daa6",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "decouple": "true",
+        "topic": "topic",
+        "topicType": "msg",
+        "style": "",
+        "onvalue": "on",
+        "onvalueType": "str",
+        "onicon": "",
+        "oncolor": "",
+        "offvalue": "off",
+        "offvalueType": "str",
+        "officon": "",
+        "offcolor": "",
+        "animate": false,
+        "className": "",
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "58a313ed13962e25"
+            ]
+        ]
+    },
+    {
+        "id": "56bc2fdd51420726",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC program",
+        "topic": "homie/ebc-control/cpu/program",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 130,
+        "y": 880,
+        "wires": [
+            [
+                "f2909a525d7a4ae3",
+                "cb30cbbc57c8369e",
+                "f6fcf7326eb7480b"
+            ]
+        ]
+    },
+    {
+        "id": "6f060cc0878b00df",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC program step",
+        "topic": "homie/ebc-control/cpu/step",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 150,
+        "y": 720,
+        "wires": [
+            [
+                "e7ef9d3d4a519af6"
+            ]
+        ]
+    },
+    {
+        "id": "6895ac3a42dea951",
+        "type": "ui_chart",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "group": "c31170120667a90d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Ah",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#008000",
+            "#98df8a",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 790,
+        "y": 560,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6bdda9907eb47a15",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC mode",
+        "topic": "homie/ebc-control/controller/mode",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 660,
+        "wires": [
+            [
+                "c794d2b0779c8439"
+            ]
+        ]
+    },
+    {
+        "id": "c794d2b0779c8439",
+        "type": "ui_text",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "abb5ab1346f5daa6",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Mode",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "74dd5a6d1f47d66e",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC response",
+        "topic": "homie/ebc-control/controller/response",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 140,
+        "y": 380,
+        "wires": [
+            [
+                "61e319a003c0fbf0",
+                "8a8764790ef4035c",
+                "141b3c576d395ae9",
+                "82cdbbdd87b1f4cb",
+                "fd25c12688fe32f5"
+            ]
+        ]
+    },
+    {
+        "id": "61e319a003c0fbf0",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "voltage",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters.voltageV",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "voltage",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 380,
+        "wires": [
+            [
+                "a9b1f7af8985f3af",
+                "432f43fba97e154f"
+            ]
+        ]
+    },
+    {
+        "id": "8a8764790ef4035c",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "current",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters.currentA",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "current",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 460,
+        "wires": [
+            [
+                "cbec394bd7281467",
+                "c1cee9ca914be2a5"
+            ]
+        ]
+    },
+    {
+        "id": "141b3c576d395ae9",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "capacity",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters.capacityAh",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "capacity",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 540,
+        "wires": [
+            [
+                "d1e14e633de506ea",
+                "83f70336ef1d72f7"
+            ]
+        ]
+    },
+    {
+        "id": "82cdbbdd87b1f4cb",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "voltage cutoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters.voltageSetV",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cutoff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 420,
+        "wires": [
+            [
+                "a9b1f7af8985f3af"
+            ]
+        ]
+    },
+    {
+        "id": "fd25c12688fe32f5",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "current cutoff",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload.parameters.cutoffA",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "cutoff",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 500,
+        "wires": [
+            [
+                "cbec394bd7281467"
+            ]
+        ]
+    },
+    {
+        "id": "cbec394bd7281467",
+        "type": "ui_chart",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "group": "261d3c931f018c94",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "A",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#ff0000",
+            "#ff7f0e",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a9b1f7af8985f3af",
+        "type": "ui_chart",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "group": "261d3c931f018c94",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "V",
+        "chartType": "line",
+        "legend": "true",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "no data",
+        "dot": false,
+        "ymin": "2",
+        "ymax": "",
+        "removeOlder": "2",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 730,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e7ef9d3d4a519af6",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "pick step command",
+        "func": "var prg = flow.get('ebc_program')\nvar step = msg.payload;\nif (step === \"\") {\n    msg.payload = \"---\";\n} else {\n    msg.payload = prg.steps[step].command;\n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 720,
+        "wires": [
+            [
+                "408236a0fcd9ff50"
+            ]
+        ]
+    },
+    {
+        "id": "408236a0fcd9ff50",
+        "type": "ui_text",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "abb5ab1346f5daa6",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Program step",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 700,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "9d3562b11d11ffde",
+        "type": "ui_text",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "abb5ab1346f5daa6",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "V",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "94f8d4554cc7d81d",
+        "type": "ui_text",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "abb5ab1346f5daa6",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "A",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "97e37108aa06eb37",
+        "type": "ui_text",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "abb5ab1346f5daa6",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Ah",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 730,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "d1e14e633de506ea",
+        "type": "rbe",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "func": "rbe",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload",
+        "topi": "topic",
+        "x": 590,
+        "y": 540,
+        "wires": [
+            [
+                "6895ac3a42dea951",
+                "612d70e7ae7f1d9d",
+                "9880974359928d8d"
+            ]
+        ]
+    },
+    {
+        "id": "e3d7664534dff132",
+        "type": "ui_form",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "C-CV, D-CC, C-CV",
+        "group": "6b5b08e0c1647b6b",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Name",
+                "value": "name",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Upper voltage (V)",
+                "value": "max_voltage",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Lower voltage (V)",
+                "value": "min_voltage",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Current (A)",
+                "value": "current",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Cut off current (A)",
+                "value": "cutoff_current",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Recharge (Ah)",
+                "value": "capacity",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "name": "",
+            "max_voltage": "",
+            "min_voltage": "",
+            "current": "",
+            "cutoff_current": "",
+            "capacity": ""
+        },
+        "payload": "",
+        "submit": "Load",
+        "cancel": "Cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": "",
+        "className": "",
+        "x": 150,
+        "y": 1300,
+        "wires": [
+            [
+                "2190e56d11e1b24a"
+            ]
+        ]
+    },
+    {
+        "id": "2190e56d11e1b24a",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "C-CV -> D-CC -> C-CV",
+        "func": "var input = msg.payload;\n\nvar prg = {};\nprg.name = input.name;\nprg.steps = [];\n\nif (!input.charge_current) {\n    input.charge_current = input.current;\n}\nif (!input.discharge_current) {\n    input.discharge_current = input.current;\n}\n\nprg.steps[0] =\n    {\n        command: \"C-CV\",\n        parameters:  {\n            voltageV: input.max_voltage,\n            currentA: input.charge_current,\n            cutoffA: input.cutoff_current\n        }\n    };\n\nprg.steps[1] =\n    {\n        command: \"D-CC\",\n        parameters: {\n            cutoffV: input.min_voltage,\n            currentA: input.discharge_current\n        }\n    };\n\nprg.steps[2] =\n{\n    command: \"C-CV\",\n    parameters: {\n        voltageV: input.max_voltage,\n        currentA: input.charge_current,\n        cutoffA: input.cutoff_current\n    }\n};\n\nif (input.capacity) {\n    prg.steps[2].stopCondition =\n    {\n        capacityAh: input.capacity\n    };\n}\n\nmsg.payload = prg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 1300,
+        "wires": [
+            [
+                "8f70fefe9e7ead0e"
+            ]
+        ]
+    },
+    {
+        "id": "8f70fefe9e7ead0e",
+        "type": "mqtt out",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "Set EBC program",
+        "topic": "homie/ebc-control/cpu/program/set",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "50dbe0137846f6f2",
+        "x": 690,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "f3a10454e5dae832",
+        "type": "ui_table",
+        "z": "b8d21aeb6f8d5f34",
+        "group": "6b5b08e0c1647b6b",
+        "name": "Program",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "columns": [],
+        "outputs": 0,
+        "cts": false,
+        "x": 680,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "f2909a525d7a4ae3",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "program",
+        "func": "\nvar data = [];\nvar index = 0;\n\nif (msg.payload.steps) {\n    msg.payload.steps.forEach(function(element) {\n        var entry = {\n            \"#\": index,\n            cmd: element.command,\n            V: \"\",\n            A: \"\",\n            A_off: \"\",\n            Stop: \"\"\n        }\n        var p = element.parameters;\n        if (p.voltageV) {\n            entry.V = p.voltageV;\n        }\n        if (p.cutoffV) {\n            entry.V = p.cutoffV;\n        }\n        if (p.currentA) {\n            entry.A = p.currentA;\n        }\n        if (p.cutoffA) {\n            entry.A_off = p.cutoffA;\n        }\n\n        if (element.stopCondition && element.stopCondition.capacityAh) {\n            entry.Stop = element.stopCondition.capacityAh;\n        }\n\n        data.push(entry);\n        index++;\n    });\n}\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 940,
+        "wires": [
+            [
+                "f3a10454e5dae832"
+            ]
+        ]
+    },
+    {
+        "id": "b95c31ddba16c11f",
+        "type": "ui_ui_control",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "events": "all",
+        "x": 660,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8d9291e7fe8adae7",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC ready",
+        "topic": "homie/ebc-control/$state",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "339bfb918921823e"
+            ]
+        ]
+    },
+    {
+        "id": "339bfb918921823e",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "hide/show",
+        "func": "var p = {};\nif (msg.payload === \"ready\") {\n    p.tabs = { show: \"EBC Controller 1\" };\n} else {\n    p.tabs = { hide: \"EBC Controller 1\" };\n}\nmsg.payload = p;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 60,
+        "wires": [
+            [
+                "b95c31ddba16c11f"
+            ]
+        ]
+    },
+    {
+        "id": "cb30cbbc57c8369e",
+        "type": "template",
+        "z": "b8d21aeb6f8d5f34",
+        "d": true,
+        "name": "",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "{payload}",
+        "output": "str",
+        "x": 360,
+        "y": 1000,
+        "wires": [
+            [
+                "f061d7d3f8f3aeba"
+            ]
+        ]
+    },
+    {
+        "id": "f061d7d3f8f3aeba",
+        "type": "ui_template",
+        "z": "b8d21aeb6f8d5f34",
+        "d": true,
+        "group": "6b5b08e0c1647b6b",
+        "name": "",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "format": "<div ng-bind-html=\"msg.payload\"></div>\n\n<table id=\"prg\" border=\"1\">\n    <thead>\n        <th>#</th>\n        <th>cmd</th>\n        <th>V</th>\n        <th>A</th>\n        <th>A off</th>\n        <th>Ah</th>\n        <th>stop</th>\n    </thead>\n    <tbody>\n        <tr ng-repeat=\"row in payload\">\n            <td ng-repeat=\"item in row\">{{item}}</td>\n        </tr>\n    </tbody>\n</table>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "className": "",
+        "x": 680,
+        "y": 1000,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9de15d44c00cba4b",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "d": true,
+        "name": "hide/show",
+        "func": "var p = {};\nif (msg.payload === \"on\") {\n    p.group = { show: [\"Stats\", \"Values\", \"Results\"] };\n} else {\n    p.group = { hide: [\"Stats\", \"Values\", \"Results\"] };\n}\nmsg.payload = p;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 120,
+        "wires": [
+            [
+                "b95c31ddba16c11f"
+            ]
+        ]
+    },
+    {
+        "id": "e78e3467d5ec2c10",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "ESP error",
+        "topic": "homie/ebc-control/esp/error",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 780,
+        "wires": [
+            [
+                "e48c315553428598"
+            ]
+        ]
+    },
+    {
+        "id": "44eef4ebdcbfc2c6",
+        "type": "ui_toast",
+        "z": "b8d21aeb6f8d5f34",
+        "position": "dialog",
+        "displayTime": "3",
+        "highlight": "",
+        "sendall": true,
+        "outputs": 1,
+        "ok": "OK",
+        "cancel": "",
+        "raw": false,
+        "className": "",
+        "topic": "",
+        "name": "EBC: Error",
+        "x": 690,
+        "y": 880,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e691228f9377b251",
+        "type": "file",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "filename": "/data/accu/results_1.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": true,
+        "overwriteFile": "false",
+        "encoding": "utf8",
+        "x": 670,
+        "y": 1080,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "2a9f83b360b07fe2",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC result",
+        "topic": "homie/ebc-control/cpu/result",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 120,
+        "y": 1080,
+        "wires": [
+            [
+                "f32e01d25032db6f"
+            ]
+        ]
+    },
+    {
+        "id": "c73ba503833e4608",
+        "type": "json",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 470,
+        "y": 1080,
+        "wires": [
+            [
+                "e691228f9377b251"
+            ]
+        ]
+    },
+    {
+        "id": "f32e01d25032db6f",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "add data",
+        "func": "var prg = flow.get('ebc_program');\nvar test_name = flow.get('test_name');\nif (!prg.name || msg.payload.length < 1) {\n    return null;\n}\nconst d = new Date();\nvar data = {\n    timestamp: d.toISOString(),\n    program: prg.name,\n    test: test_name,\n    result: msg.payload\n    };\nmsg.payload = data;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 1080,
+        "wires": [
+            [
+                "c73ba503833e4608",
+                "829b6263a05a5b3a"
+            ]
+        ]
+    },
+    {
+        "id": "432f43fba97e154f",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "0.000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$formatNumber(msg.payload, \"###0.000\")",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 340,
+        "wires": [
+            [
+                "9d3562b11d11ffde"
+            ]
+        ]
+    },
+    {
+        "id": "c1cee9ca914be2a5",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "0.000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$formatNumber(msg.payload, \"###0.000\")",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 420,
+        "wires": [
+            [
+                "94f8d4554cc7d81d"
+            ]
+        ]
+    },
+    {
+        "id": "83f70336ef1d72f7",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "0.000",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$formatNumber(msg.payload, \"###0.000\")",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 590,
+        "y": 500,
+        "wires": [
+            [
+                "97e37108aa06eb37"
+            ]
+        ]
+    },
+    {
+        "id": "23eba3d3f51f0238",
+        "type": "link out",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC Controller to Signal",
+        "mode": "link",
+        "links": [
+            "5a772e74e473821e"
+        ],
+        "x": 835,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "829b6263a05a5b3a",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "generate message",
+        "func": "var step_num = msg.payload.result.length;\nvar step = msg.payload.result.pop();\n\nvar str = \n    \"EBC Controller 1\\n\" +\n    \"Program: \\t\" + msg.payload.program + \"\\n\" +\n    \"Test: \\t\" + msg.payload.test + \"\\n\" +\n    \"Step: \\t\" + step_num + \"\\n\" +\n    \"Command: \\t\" + step.command + \"\\n\" +\n    \"Capacity: \\t\" + step.capacityAh + \" Ah\";\n\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 1140,
+        "wires": [
+            [
+                "23eba3d3f51f0238"
+            ]
+        ]
+    },
+    {
+        "id": "16db33eed4e785ce",
+        "type": "ui_text_input",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "Test name",
+        "tooltip": "",
+        "group": "abb5ab1346f5daa6",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 130,
+        "y": 1200,
+        "wires": [
+            [
+                "f675c7811e28aae1"
+            ]
+        ]
+    },
+    {
+        "id": "f675c7811e28aae1",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "store test_name",
+        "rules": [
+            {
+                "t": "set",
+                "p": "test_name",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 1200,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/db.svg"
+    },
+    {
+        "id": "a98cd461f858ef67",
+        "type": "trigger",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "only  1 per hour",
+        "op1": "",
+        "op2": "",
+        "op1type": "pay",
+        "op2type": "nul",
+        "duration": "1",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "hr",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 660,
+        "y": 780,
+        "wires": [
+            [
+                "9634eb35e5f2f176"
+            ]
+        ]
+    },
+    {
+        "id": "e48c315553428598",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "format message",
+        "func": "if (!msg.payload) {\n    return null;\n}\nvar str = \n    \"EBC Controller 1\\n\" +\n    \"Error: \\t\" + msg.payload;\nmsg.payload = str;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 780,
+        "wires": [
+            [
+                "a98cd461f858ef67",
+                "44eef4ebdcbfc2c6"
+            ]
+        ]
+    },
+    {
+        "id": "9634eb35e5f2f176",
+        "type": "link out",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC Controller to Signal",
+        "mode": "link",
+        "links": [
+            "5a772e74e473821e"
+        ],
+        "x": 835,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "ffc59016cba10ced",
+        "type": "ui_dropdown",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "Presets",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "6b5b08e0c1647b6b",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "LF280",
+                "value": "LF280",
+                "type": "str"
+            },
+            {
+                "label": "Li-Ion 700mAh",
+                "value": "Li-Ion700",
+                "type": "str"
+            },
+            {
+                "label": "Li-Ion 800mAh",
+                "value": "Li-Ion800",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "topic",
+        "topicType": "msg",
+        "className": "",
+        "x": 120,
+        "y": 1360,
+        "wires": [
+            [
+                "575de8e3d251eab6"
+            ]
+        ]
+    },
+    {
+        "id": "eeee09261d0116b4",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "select program",
+        "func": "var preset = {};\nswitch (msg.payload)\n{\n    case \"LF280\":\n        preset = {\n            name: \"LF280\",\n            max_voltage: 3.6,\n            min_voltage: 2.6,\n            charge_current: 5,\n            discharge_current: 20,\n            cutoff_current: 0.5\n        };\n        break;\n    case \"Li-Ion700\":\n        preset = {\n            name: \"Li-Ion 700mAh\",\n            max_voltage: 4.2,\n            min_voltage: 2.75,\n            current: 0.350,\n            cutoff_current: 0.1\n        };\n        break;\n    case \"Li-Ion800\":\n        preset = {\n            name: \"Li-Ion 800mAh\",\n            max_voltage: 4.2,\n            min_voltage: 2.75,\n            current: 0.400,\n            cutoff_current: 0.1\n        };\n        break;\n}\nmsg.payload = preset;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 1220,
+        "wires": [
+            [
+                "2190e56d11e1b24a"
+            ]
+        ]
+    },
+    {
+        "id": "c67aad2c2aa9ce12",
+        "type": "file in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "filename": "/data/accu/programs.json",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 270,
+        "y": 1440,
+        "wires": [
+            [
+                "2cbeca8a3374778b"
+            ]
+        ]
+    },
+    {
+        "id": "575de8e3d251eab6",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "prg_id",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 310,
+        "y": 1360,
+        "wires": [
+            [
+                "c67aad2c2aa9ce12"
+            ]
+        ]
+    },
+    {
+        "id": "2cbeca8a3374778b",
+        "type": "json",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 490,
+        "y": 1440,
+        "wires": [
+            [
+                "0bcbd4edbcdaa5fc"
+            ]
+        ]
+    },
+    {
+        "id": "0bcbd4edbcdaa5fc",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "select program",
+        "func": "var prg = null;\n\nmsg.payload.some(function(element) {\n    if (element.id === msg.prg_id) {\n        prg = element;\n        return true;\n    } else {\n        return false;\n    }\n});\nif (prg) {\n    msg.payload = prg;\n    return msg;\n} else {\n    return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 1440,
+        "wires": [
+            [
+                "8f70fefe9e7ead0e"
+            ]
+        ]
+    },
+    {
+        "id": "2e6c2fca3a392308",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "store alarm_ah",
+        "rules": [
+            {
+                "t": "set",
+                "p": "alarm_ah",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "alarm",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 600,
+        "wires": [
+            [
+                "6895ac3a42dea951"
+            ]
+        ],
+        "icon": "node-red/db.svg"
+    },
+    {
+        "id": "612d70e7ae7f1d9d",
+        "type": "function",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "check alarm",
+        "func": "var alarm = flow.get(\"alarm_ah\");\n\nif (!alarm) {\n    return null;\n}\n\nif (alarm <= msg.payload) {\n    msg.payload = \"Alarm \" + msg.payload + \"Ah\";\n    flow.set(\"alarm_ah\", 0);\n    return msg;\n}\nreturn null;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 750,
+        "y": 600,
+        "wires": [
+            [
+                "9634eb35e5f2f176"
+            ]
+        ]
+    },
+    {
+        "id": "efa595b93030a8cf",
+        "type": "ui_text_input",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "label": "Alarm Ah",
+        "tooltip": "",
+        "group": "c31170120667a90d",
+        "order": 8,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": "0",
+        "topic": "topic",
+        "sendOnBlur": true,
+        "className": "",
+        "topicType": "msg",
+        "x": 200,
+        "y": 600,
+        "wires": [
+            [
+                "2e6c2fca3a392308"
+            ]
+        ]
+    },
+    {
+        "id": "9880974359928d8d",
+        "type": "file",
+        "z": "b8d21aeb6f8d5f34",
+        "d": true,
+        "name": "",
+        "filename": "/data/accu/capacity_log.txt",
+        "filenameType": "str",
+        "appendNewline": true,
+        "createDir": false,
+        "overwriteFile": "false",
+        "encoding": "none",
+        "x": 1220,
+        "y": 500,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "eb7a69ad7759cbac",
+        "type": "inject",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "5 Minutes",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "300",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 1010,
+        "y": 420,
+        "wires": [
+            [
+                "ca551e2c4c50edc9"
+            ]
+        ]
+    },
+    {
+        "id": "ca551e2c4c50edc9",
+        "type": "moment",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "",
+        "topic": "",
+        "input": "payload",
+        "inputType": "msg",
+        "inTz": "ETC/UTC",
+        "adjAmount": 0,
+        "adjType": "days",
+        "adjDir": "add",
+        "format": "YYYY-MM-DDTHH:mm:ss",
+        "locale": "de-DE",
+        "output": "payload",
+        "outputType": "msg",
+        "outTz": "Europe/Berlin",
+        "x": 1200,
+        "y": 420,
+        "wires": [
+            [
+                "9880974359928d8d"
+            ]
+        ]
+    },
+    {
+        "id": "fbc5dfb375b6aaf1",
+        "type": "mqtt in",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "EBC raw in",
+        "topic": "homie/ebc-control/raw/in",
+        "qos": "2",
+        "datatype": "utf8",
+        "broker": "50dbe0137846f6f2",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 960,
+        "y": 480,
+        "wires": [
+            [
+                "9880974359928d8d"
+            ]
+        ]
+    },
+    {
+        "id": "f6fcf7326eb7480b",
+        "type": "change",
+        "z": "b8d21aeb6f8d5f34",
+        "name": "store program",
+        "rules": [
+            {
+                "t": "set",
+                "p": "ebc_program",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg",
+                "dc": true
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 880,
+        "wires": [
+            []
+        ],
+        "icon": "node-red/db.svg"
+    },
+    {
+        "id": "50dbe0137846f6f2",
+        "type": "mqtt-broker",
+        "name": "mosquitto",
+        "broker": "10.1.1.55",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "981f99fbe508e15a",
+        "type": "ui_group",
+        "name": "Controller",
+        "tab": "a366d2717aec1929",
+        "order": 1,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "abb5ab1346f5daa6",
+        "type": "ui_group",
+        "name": "Stats",
+        "tab": "a366d2717aec1929",
+        "order": 2,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "c31170120667a90d",
+        "type": "ui_group",
+        "name": "Results",
+        "tab": "a366d2717aec1929",
+        "order": 4,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "261d3c931f018c94",
+        "type": "ui_group",
+        "name": "Values",
+        "tab": "a366d2717aec1929",
+        "order": 3,
+        "disp": false,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "6b5b08e0c1647b6b",
+        "type": "ui_group",
+        "name": "Program",
+        "tab": "a366d2717aec1929",
+        "order": 5,
+        "disp": true,
+        "width": "6",
+        "collapse": true,
+        "className": ""
+    },
+    {
+        "id": "a366d2717aec1929",
+        "type": "ui_tab",
+        "name": "EBC Controller 1",
+        "icon": "dashboard",
+        "order": 3,
+        "disabled": false,
+        "hidden": false
+    }
+]

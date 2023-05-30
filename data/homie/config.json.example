@@ -1,0 +1,19 @@
+{
+  "name": "EBC-MQTT-Gateway",
+  "device_id": "ebc-control",
+  "wifi": {
+    "ssid": "<MY_SSID>",
+    "password": "<MY_PASSWORD>"
+  },
+  "mqtt": {
+    "host": "<MQTT_HOST_IP>",
+    "port": 1883,
+    "base_topic": "homie/",
+    "auth": true,
+    "username": "<MQTT_USER_NAME>",
+    "password": "<MQTT_USER_PASSWORD>"
+  },
+  "ota": {
+    "enabled": true
+  }
+}
